@@ -1,0 +1,173 @@
+/* 🌐 خطوط */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Reem+Kufi:wght@400;700&display=swap');
+
+/* إعدادات عامة */
+body {
+  background: #f7f7f7;
+  font-family: "Cairo", sans-serif;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.agreement {
+  background: #fff;
+  padding: 20mm;
+  border: 1px solid #d4af37;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  min-height: 297mm;
+  color: #333;
+}
+
+/* Header */
+.agreement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 8px;
+}
+.agreement-header h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #b8860b;
+  letter-spacing: 1px;
+}
+.agreement-header h2 {
+  font-size: 16px;
+  color: #555;
+  margin: 4px 0;
+}
+
+/* Table Titles */
+.table-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #946c07;
+  margin: 16px 0 6px 0;
+  border-left: 6px solid #d4af37;
+  padding-left: 10px;
+  background: linear-gradient(90deg, #fff9f0, #fffdf7);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(212,175,55,0.1);
+}
+
+/* Tables */
+.contract-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 15px;
+  background: #fffdf8;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+.contract-table th, .contract-table td {
+  border: 1px solid #e8d7a8;
+  padding: 8px 12px;
+  text-align: right;
+}
+.contract-table th {
+  background: linear-gradient(90deg, #fff9f0, #fffdf7);
+  color: #946c07;
+  font-weight: 700;
+}
+.contract-table td {
+  color: #333;
+}
+
+/* Signatures */
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+.signatures div {
+  flex: 1;
+  border-top: 2px dashed #b8860b;
+  padding-top: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Logo */
+.logo {
+  width: 300px;
+  height: auto;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 8px;
+  direction: ltr;
+}
+.en-head , .ar-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header h1 {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #b8860b;
+  letter-spacing: 1px;
+}
+.header h2 {
+  font-size: 1rem;
+  color: #555;
+  margin: 4px 0;
+}
+.en-head h2, .ar-head h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #946c07;
+}
+ h2 span {
+  color: rgb(192, 67, 67);
+ }
+.notes{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+.ar-note , .en-note {
+  padding:  0 10px 2px;
+  width: 50%;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  background: #fff9f0;
+  box-shadow: 0 2px 6px rgba(212,175,55,0.1);
+}
+.en-note{
+  direction: ltr;
+}
+.en-note p , .ar-note p {
+  font: bold 14px "Cairo", sans-serif;
+  color: #333;
+}
+.signatures p{
+  font: bold 14px "Cairo", sans-serif;
+  color: #333;
+}
+.cost-table {
+  direction: ltr;
+  text-align: left;
+  font-size: 14px;
+
+}
+.contract-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.contract-table tr:hover {
+  background-color: #f1f1f1;
+}
+.cost-table tr td{
+  text-align: left;
+}
