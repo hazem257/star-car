@@ -135,8 +135,8 @@ const dashboard = () => {
             )}
           </div>
             <div className="image-card">
-            <label htmlFor="idImage">صورة البطاقة الخلفيه</label>
-            <input id="idImage" type="file" name="idbackImage" accept="image/*" onChange={onChange} />
+            <label htmlFor="idbackImage">صورة البطاقة الخلفيه</label>
+            <input id="idbackImage" type="file" name="idbackImage" accept="image/*" onChange={onChange} />
             {form.idImage ? (
               <img
                 src={form.idbackImage}
@@ -150,8 +150,8 @@ const dashboard = () => {
           </div>
 
           <div className="image-card">
-            <label htmlFor="licenseImage">صورة الرخصة  الاماميه</label>
-            <input id="licenseImage" type="file" name="licenseImage" accept="image/*" onChange={onChange} />
+            <label htmlFor="licensefrontImage">صورة الرخصة  الاماميه</label>
+            <input id="licensefrontImage" type="file" name="licenseImage" accept="image/*" onChange={onChange} />
             {form.licensefrontImage ? (
               <img
                 src={form.licensefrontImage}
@@ -164,8 +164,8 @@ const dashboard = () => {
             )}
           </div>
             <div className="image-card">
-            <label htmlFor="licenseImage">صورة الرخصة  الخلفيه</label>
-            <input id="licenseImage" type="file" name="licensebackImage" accept="image/*" onChange={onChange} />
+            <label htmlFor="licensebackImage">صورة الرخصة  الخلفيه</label>
+            <input id="licensebackImage" type="file" name="licensebackImage" accept="image/*" onChange={onChange} />
             {form.licensebackImage ? (
               <img
                 src={form.licenseImage}
