@@ -121,7 +121,7 @@ const dashboard = () => {
         <h3>🖼️ صور الهوية</h3>
         <div className="image-upload-wrapper">
           <div className="image-card">
-            <label htmlFor="idImage">صورة البطاقة</label>
+            <label htmlFor="idImage"> صورة البطاقة الاماميه</label>
             <input id="idImage" type="file" name="idImage" accept="image/*" onChange={onChange} />
             {form.idImage ? (
               <img
@@ -134,16 +134,44 @@ const dashboard = () => {
               <p>📷 لم يتم رفع صورة</p>
             )}
           </div>
+            <div className="image-card">
+            <label htmlFor="idImage">صورة البطاقة الخلفيه</label>
+            <input id="idImage" type="file" name="idImage" accept="image/*" onChange={onChange} />
+            {form.idImage ? (
+              <img
+                src={form.idbackImage}
+                alt="صورة البطاقة"
+                className="image-preview"
+                onClick={() => setSelectedImage(form.idbackImage)}
+              />
+            ) : (
+              <p>📷 لم يتم رفع صورة</p>
+            )}
+          </div>
 
           <div className="image-card">
-            <label htmlFor="licenseImage">صورة الرخصة</label>
+            <label htmlFor="licenseImage">صورة الرخصة  الاماميه</label>
             <input id="licenseImage" type="file" name="licenseImage" accept="image/*" onChange={onChange} />
-            {form.licenseImage ? (
+            {form.licensefrontImage ? (
               <img
                 src={form.licenseImage}
                 alt="صورة الرخصة"
                 className="image-preview"
-                onClick={() => setSelectedImage(form.licenseImage)}
+                onClick={() => setSelectedImage(form.licensefrontImage)}
+              />
+            ) : (
+              <p>📷 لم يتم رفع صورة</p>
+            )}
+          </div>
+            <div className="image-card">
+            <label htmlFor="licenseImage">صورة الرخصة  الخلفيه</label>
+            <input id="licenseImage" type="file" name="licenseImage" accept="image/*" onChange={onChange} />
+            {form.licensebackImage ? (
+              <img
+                src={form.licenseImage}
+                alt="صورة الرخصة"
+                className="image-preview"
+                onClick={() => setSelectedImage(form.licensebackImage)}
               />
             ) : (
               <p>📷 لم يتم رفع صورة</p>
