@@ -117,68 +117,77 @@ const dashboard = () => {
       </div>
 
       {/* صور الهوية */}
-      <div className="form-section">
-        <h3>🖼️ صور الهوية</h3>
-        <div className="image-upload-wrapper">
-          <div className="image-card">
-            <label htmlFor="idImage"> صورة البطاقة الاماميه</label>
-            <input id="idImage" type="file" name="idImage" accept="image/*" onChange={onChange} />
-            {form.idImage ? (
-              <img
-                src={form.idImage}
-                alt="صورة البطاقة"
-                className="image-preview"
-                onClick={() => setSelectedImage(form.idImage)}
-              />
-            ) : (
-              <p>📷 لم يتم رفع صورة</p>
-            )}
-          </div>
-            <div className="image-card">
-            <label htmlFor="idbackImage">صورة البطاقة الخلفيه</label>
-            <input id="idbackImage" type="file" name="idbackImage" accept="image/*" onChange={onChange} />
-            {form.idImage ? (
-              <img
-                src={form.idbackImage}
-                alt="صورة البطاقة"
-                className="image-preview"
-                onClick={() => setSelectedImage(form.idbackImage)}
-              />
-            ) : (
-              <p>📷 لم يتم رفع صورة</p>
-            )}
-          </div>
+    <div className="form-section">
+  <h3>🖼️ صور الهوية</h3>
+  <div className="image-upload-wrapper">
+    
+    {/* صورة البطاقة الأمامية */}
+    <div className="image-card">
+      <label htmlFor="idImage">صورة البطاقة الأمامية</label>
+      <input id="idImage" type="file" name="idImage" accept="image/*" onChange={onChange} />
+      {form.idImage ? (
+        <img
+          src={form.idImage}
+          alt="صورة البطاقة الأمامية"
+          className="image-preview"
+          onClick={() => setSelectedImage(form.idImage)}
+        />
+      ) : (
+        <p>📷 لم يتم رفع صورة</p>
+      )}
+    </div>
 
-          <div className="image-card">
-            <label htmlFor="licensefrontImage">صورة الرخصة  الاماميه</label>
-            <input id="licensefrontImage" type="file" name="licenseImage" accept="image/*" onChange={onChange} />
-            {form.licensefrontImage ? (
-              <img
-                src={form.licensefrontImage}
-                alt="صورة الرخصة"
-                className="image-preview"
-                onClick={() => setSelectedImage(form.licensefrontImage)}
-              />
-            ) : (
-              <p>📷 لم يتم رفع صورة</p>
-            )}
-          </div>
-            <div className="image-card">
-            <label htmlFor="licensebackImage">صورة الرخصة  الخلفيه</label>
-            <input id="licensebackImage" type="file" name="licensebackImage" accept="image/*" onChange={onChange} />
-            {form.licensebackImage ? (
-              <img
-                src={form.licenseImage}
-                alt="صورة الرخصة"
-                className="image-preview"
-                onClick={() => setSelectedImage(form.licensebackImage)}
-              />
-            ) : (
-              <p>📷 لم يتم رفع صورة</p>
-            )}
-          </div>
-        </div>
-      </div>
+    {/* صورة البطاقة الخلفية */}
+    <div className="image-card">
+      <label htmlFor="idbackImage">صورة البطاقة الخلفية</label>
+      <input id="idbackImage" type="file" name="idbackImage" accept="image/*" onChange={onChange} />
+      {form.idbackImage ? (
+        <img
+          src={form.idbackImage}
+          alt="صورة البطاقة الخلفية"
+          className="image-preview"
+          onClick={() => setSelectedImage(form.idbackImage)}
+        />
+      ) : (
+        <p>📷 لم يتم رفع صورة</p>
+      )}
+    </div>
+
+    {/* صورة الرخصة الأمامية */}
+    <div className="image-card">
+      <label htmlFor="licensefrontImage">صورة الرخصة الأمامية</label>
+      <input id="licensefrontImage" type="file" name="licensefrontImage" accept="image/*" onChange={onChange} />
+      {form.licensefrontImage ? (
+        <img
+          src={form.licensefrontImage}
+          alt="صورة الرخصة الأمامية"
+          className="image-preview"
+          onClick={() => setSelectedImage(form.licensefrontImage)}
+        />
+      ) : (
+        <p>📷 لم يتم رفع صورة</p>
+      )}
+    </div>
+
+    {/* صورة الرخصة الخلفية */}
+    <div className="image-card">
+      <label htmlFor="licensebackImage">صورة الرخصة الخلفية</label>
+      <input id="licensebackImage" type="file" name="licensebackImage" accept="image/*" onChange={onChange} />
+      {form.licensebackImage ? (
+        <img
+          src={form.licensebackImage}
+          alt="صورة الرخصة الخلفية"
+          className="image-preview"
+          onClick={() => setSelectedImage(form.licensebackImage)}
+        />
+      ) : (
+        <p>📷 لم يتم رفع صورة</p>
+      )}
+    </div>
+
+  </div>
+</div>
+
 
       {/* الباسبور */}
       <div className="form-section">
