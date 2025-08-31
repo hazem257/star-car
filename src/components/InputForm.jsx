@@ -80,6 +80,9 @@ const saveContract = () => {
 const dashboard = () => {
   navigate("/dashboard");
 };
+const returnHome = () => {
+  navigate("/");
+};
 
   return (
     <div className="page-wrapper" style={{ direction: "rtl" }}>
@@ -305,6 +308,7 @@ const dashboard = () => {
       <div className="btn-cont" style={{ marginTop: "20px" }}>
         <button onClick={saveContract}>💾 حفظ + معاينة العقد</button>
         <button onClick={dashboard}>Dashboard</button>
+        <button onClick={returnHome}>اضافة عقد جديد</button>
       </div>
     </div>
   );
