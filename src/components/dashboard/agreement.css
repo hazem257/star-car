@@ -1,0 +1,14 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .agreement, .agreement * {
+    visibility: visible;
+  }
+  .agreement {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
