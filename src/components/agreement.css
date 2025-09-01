@@ -17,7 +17,10 @@ body {
   border-radius: 18px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   min-height: 297mm;
+  max-width: 210mm;
+  margin: auto;
   color: #333;
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -94,10 +97,10 @@ body {
 
 /* Logo */
 .logo {
-  width: 300px;
+  width: 200px;
   height: auto;
 }
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,6 +113,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .header h1 {
   font-size: 1rem;
@@ -123,14 +127,16 @@ body {
   margin: 4px 0;
 }
 .en-head h2, .ar-head h2 {
-  font-size: 2rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #946c07;
 }
- h2 span {
+h2 span {
   color: rgb(192, 67, 67);
- }
-.notes{
+}
+
+/* Notes */
+.notes {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -138,21 +144,21 @@ body {
   width: 100%;
 }
 .ar-note , .en-note {
-  padding:  0 10px 2px;
+  padding: 0 10px 2px;
   width: 50%;
   border: 1px solid #d4af37;
   border-radius: 8px;
   background: #fff9f0;
   box-shadow: 0 2px 6px rgba(212,175,55,0.1);
 }
-.en-note{
+.en-note {
   direction: ltr;
 }
 .en-note p , .ar-note p {
   font: bold 14px "Cairo", sans-serif;
   color: #333;
 }
-.signatures p{
+.signatures p {
   font: bold 14px "Cairo", sans-serif;
   color: #333;
 }
@@ -160,7 +166,6 @@ body {
   direction: ltr;
   text-align: left;
   font-size: 14px;
-
 }
 .contract-table tr:nth-child(even) {
   background-color: #f9f9f9;
@@ -168,19 +173,42 @@ body {
 .contract-table tr:hover {
   background-color: #f1f1f1;
 }
-.cost-table tr td{
+.cost-table tr td {
   text-align: left;
 }
+
+/* 🖨️ إعدادات الطباعة */
 @media print {
   body {
     margin: 0;
     padding: 0;
-    zoom: 0.8; /* يقلل المحتوى بنسبة 80% ليكون في صفحة واحدة */
+    background: #fff;
   }
   .agreement {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 12mm;
     page-break-inside: avoid;
   }
-  table, th, td {
-    font-size: 12px; /* تصغير حجم الخط */
+  .agreement-header h1 {
+    font-size: 20px; /* تصغير الخط */
+  }
+  .agreement-header h2 {
+    font-size: 13px;
+  }
+  .contract-table, th, td {
+    font-size: 11px; /* الخط أصغر */
+    box-shadow: none !important;
+  }
+  .table-title {
+    font-size: 14px;
+    box-shadow: none !important;
+    background: none !important;
+  }
+  .signatures p {
+    font-size: 12px;
   }
 }
