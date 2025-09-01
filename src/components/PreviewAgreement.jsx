@@ -20,16 +20,20 @@ export default function PreviewAgreement() {
   if (!form) return <p>⏳ جاري تحميل العقد...</p>;
 
   // 🟢 تحميل كـ PDF
-  const downloadPDF = async () => {
-    const canvas = await html2canvas(refAgreement.current, { scale: 3, useCORS: true });
-    const imgData = canvas.toDataURL("image/png");
-    const pdf = new jsPDF("p", "mm", "a4");
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const imgHeight = (canvas.height * pageWidth) / canvas.width;
+const downloadPDF = async () => {
+  const canvas = await html2canvas(refAgreement.current, { scale: 3, useCORS: true });
+  const imgData = canvas.toDataURL("image/png");
+  const pdf = new jsPDF("p", "mm", "a4");
 
-    pdf.addImage(imgData, "PNG", 0, 0, pageWidth, imgHeight);
-    pdf.save(`contract-${form.contractNo}.pdf`);
-  };
+  const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+
+  // نخلي الصورة كلها تتحشر في صفحة A4 واحدة
+  pdf.addImage(imgData, "PNG", 0, 0, pageWidth, pageHeight);
+
+  pdf.save(`contract-${form.contractNo}.pdf`);
+};
+
 
   // 🟢 طباعة العقد مباشرة
   const printContract = () => {
